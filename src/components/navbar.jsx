@@ -6,6 +6,7 @@ const NavBar = ({ onSearch, cartItemCount }) => {
     const [searchQuery, setSearchQuery] = useState('');
 
     const handleSubmit = (e) => {
+        e.preventDefault();
         if (searchQuery.trim().length) {
             onSearch(searchQuery.trim())
         }
@@ -30,7 +31,7 @@ const NavBar = ({ onSearch, cartItemCount }) => {
                                         placeholder="Search products..."
                                     />
                                 </div>
-                                <button type="button" className="search-btn" onClick={handleSubmit} >
+                                <button type="submit" className="search-btn" onClick={handleSubmit} >
                                     Search
                                 </button>
                             </form>

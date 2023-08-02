@@ -27,7 +27,7 @@ const Product = () => {
                     <div className="details p-3">
                         Product not found. Please visit{" "}
                         <Link to="/" replace>
-                            home
+                            Home
                         </Link>{" "}
                         to see all available products
                     </div>

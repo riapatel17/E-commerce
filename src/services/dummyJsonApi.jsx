@@ -1,9 +1,14 @@
 const dummyJsonApi = {
     fetchAllProducts: async () => {
-        const res = await fetch('https://dummyjson.com/products?limit=10&skip=1');
+        const res = await fetch('https://dummyjson.com/products?&limit=8&skip=1');
         const result = res.json();
         return result;
     },
+    // fetchProducts: async () => {
+    //     const res = await fetch('https://dummyjson.com/products?page={page}');
+    //     const result = res.json();
+    //     return result;
+    // },
     fetchProductById: async (productId) => {
         const res = await fetch(`https://dummyjson.com/products/${productId}`)
         const result = await res.json()

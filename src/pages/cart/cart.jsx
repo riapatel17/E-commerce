@@ -11,9 +11,6 @@ const Cart = () => {
         return cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0)
     }
 
-    const round = (value, decimals) => {
-        return Number(Math.round(value + "e" + decimals) + "e-" + decimals)
-    }
 
     return (
         <div className="cartWrapper">
@@ -34,7 +31,7 @@ const Cart = () => {
                                                     {item.product.title}
                                                 </Link>
                                             </div>
-                                            <span className="price">${round(item.product.price * item.quantity, 2)}</span>
+                                            <span className="price">${item.product.price * item.quantity}</span>
                                         </div>
                                         <div className="itemControl flex">
                                             <div>
@@ -69,7 +66,7 @@ const Cart = () => {
                             <div className="summary py-3 my-2">
                                 <div className="flex py-1">
                                     <span>Subtotal:</span>
-                                    <span className="price">${round(cartTotal(), 2)}</span>
+                                    <span className="price">${cartTotal()}</span>
                                 </div>
                                 <div className="flex py-1">
                                     <span>Shipping Fee:</span>
@@ -77,7 +74,7 @@ const Cart = () => {
                                 </div>
                                 <div className=" flex py-1">
                                     <span>Total:</span>
-                                    <span className="price">${round(cartTotal() + SHIPPING_CHARGES, 2)}</span>
+                                    <span className="price">${cartTotal() + SHIPPING_CHARGES}</span>
                                 </div>
                             </div>
                         </div>

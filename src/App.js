@@ -4,8 +4,7 @@ import Product from "./pages/product/product";
 import Products from "./pages/products/products";
 import { NotFound } from "./pages/not-found/not-found"
 import Cart from "./pages/cart/cart";
-import { useCart } from "./context/cart";
-
+import { useCart } from "./context/cart"
 
 function App() {
 
@@ -25,6 +24,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
     </>
   );
 }
