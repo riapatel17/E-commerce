@@ -49,12 +49,15 @@ const Product = () => {
             <div className="info">
               <div className="description">
                 <h3>{product.title}</h3>
-                <p className=" my-2">{product.description}</p>
+                <div className="detail"> {product.brand}</div>
+                <div className="detail">{product.category}</div>
+                <p>{product.description}</p>
+                <h5 className=" my-2">With {product.discountPercentage}% Discount</h5>
               </div>
               <div className="flex">
                 <span className="price">${product.price}</span>
                 <span className="cart" onClick={() => addToCart(product)}>
-                  <img src="/cart.svg" alt="" />
+                  <img className="cartImg" src="/cart.svg" alt="" />
                 </span>
               </div>
             </div>

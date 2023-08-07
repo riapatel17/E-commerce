@@ -1,6 +1,6 @@
 const dummyJsonApi = {
     fetchAllProducts: async (page = 0, perPage, q) => {
-        const res = await fetch(`https://dummyjson.com/products?&limit=10&skip=${page}`);
+        const res = await fetch(`https://dummyjson.com/products?&limit=8&skip=${page}`);
         const result = res.json();
         return result;
     },
