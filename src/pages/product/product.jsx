@@ -42,7 +42,7 @@ const Product = () => {
         <div className={"loader"}></div>
       ) : (
         <div className="product py-2">
-          <div className="details grid p-3">
+          <div className="details grid p-3 my-5">
             <div className="product-image">
               <img src={product.images[0]} alt="" />
             </div>

@@ -47,7 +47,7 @@ img {
   /* flex: 2 1 200px;*/
   height: 100%;
   width: 100%;
-  padding: 20px;
+  padding: 8px;
   /* margin: 20px; */
   box-shadow: rgb(189, 189, 192) 0px 15px 15px -5px;
   border-radius: 20px;
@@ -225,7 +225,8 @@ img {
 }
 
 .my-5 {
-  margin: 4rem 0;
+  /* margin: 4rem 0; */
+  margin: 150px auto;
 }
 
 @keyframes spin {
@@ -242,6 +243,11 @@ img {
   background-color: #007fff;
   color: #fff;
   text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .wrapper .grid {
@@ -371,10 +377,9 @@ input[type="text"] {
   gap: 50px;
 }
 
-.products .grid>* {
+.products .grid > * {
   justify-self: center;
 }
-
 
 .card .flex {
   justify-content: space-between;
@@ -389,7 +394,7 @@ input[type="text"] {
 img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 .title {
@@ -431,10 +436,6 @@ img {
   border: none;
   font-size: 2rem;
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   cursor: pointer;
 }
 
@@ -487,6 +488,37 @@ img {
   cursor: pointer;
 }
 
+.hamburger-menu {
+  position: relative;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: none;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+.menu-items {
+  display: none;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-links {
+  margin-top: 38px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
 @media (max-width: 895px) {
   .formContainer {
     width: 100%;
@@ -503,6 +535,32 @@ img {
   .products .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+  .menu-items {
+    display: none;
+  }
+  .brand {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+  .icons {
+    display: none;
+  }
+  .icon-cart {
+    display: none;
+  }
+  .cartCounter {
+    display: none;
+  }
+  .hamburger-menu.open .menu-items {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 695px) {
@@ -512,6 +570,10 @@ img {
 
   .wrapper .grid {
     grid-template-columns: 0fr 0fr 1fr 3fr 0fr;
+  }
+
+  .products {
+    margin: 200px auto;
   }
 
   .brand {

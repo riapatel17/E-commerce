@@ -79,7 +79,7 @@ const Products = () => {
           )}
         </div>
         <div className="btns">
-          <button className="btn-pagination my-1" onClick={() => handlePagnavigation('prev')} disabled={page === 0}>Previous</button>
+          <button className="btn-pagination my-1 " onClick={() => handlePagnavigation('prev')} disabled={page === 0}>Previous</button>
           <button className="btn-pagination my-1" onClick={() => handlePagnavigation('next')} disabled={!hasMore}>Next</button>
         </div>
       </div>
