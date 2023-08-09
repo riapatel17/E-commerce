@@ -535,6 +535,9 @@ img {
   .products .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .btn-pagination{
+    width: 30%;
+  }
   .menu-icon {
     display: block;
     cursor: pointer;
